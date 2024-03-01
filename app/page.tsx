@@ -34,7 +34,7 @@ export default function Home() {
 									variant='contained'
 									color='success'
 									size='large'>
-									<Link href='localhost:3001/api/auth/discord'>
+									<Link href='http://localhost:3001/api/auth/discord'>
 										Sign in
 									</Link>
 								</Button>
