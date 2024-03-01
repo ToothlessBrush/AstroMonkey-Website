@@ -1,37 +1,36 @@
-import styles from '../styles/star-field.module.css';
+import styles from '@/styles/star-field.module.css';
 import { Button } from '@mui/material';
 import Link from 'next/link';
-import { Footer } from '../components/footer';
-import { NavBar } from '../components/navbar';
-
-import { Meteors } from '../components/ui/meteors';
+import { Footer } from '@/components/footer';
+import { NavBar } from '@/components/navbar';
+import Discord from '@/components/discord';
+import Invite from '@/components/invite';
+import { Meteors } from '@/components/ui/meteors';
 
 export default function Home() {
-    return (
+	return (
 		<div>
 			<Meteors number={30} />
 			<div className={styles.bg}>
 				<NavBar />
 				<div className='flex flex-col items-center justify-center'>
 					<div className='text-white flex flex-col items-center justify-center h-screen mt-[-9vh]'>
-						<div className='mb-4'>WELCOME TO ASTROMONKEY</div>
-						<div className=''>
+						<div className='mb-5 text-8xl text-center'>
+							WELCOME TO ASTROMONKEY
+						</div>
+						<div className='text-4xl w-2/5 text-center'>
 							An open-source music bot that has support for Auto
 							completion, search using Slash Commands, Queue
 							management, and creating/using playlists.
 							<div />
-							<div className='text-white flex justify-center space-x-4 rounded mt-4'>
+							<div className='text-white flex justify-center space-x-8 rounded mt-5'>
 								<Button
 									sx={{
-										'& .MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge css-l0n3bs-MuiButtonBase-root-MuiButton-root':
-											{
-												backgroundColor: 'white',
-											},
-										borderColor: 'white',
 										'&:hover': {
 											backgroundColor: '#8729D0',
 										},
 									}}
+									endIcon={<Discord />}
 									variant='contained'
 									color='success'
 									size='large'>
@@ -43,6 +42,7 @@ export default function Home() {
 											backgroundColor: '#8729D0',
 										},
 									}}
+									startIcon={<Invite />}
 									variant='contained'
 									size='large'>
 									<Link href=''>Invite</Link>

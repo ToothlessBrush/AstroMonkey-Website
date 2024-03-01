@@ -2,6 +2,6 @@
 	background-image: url('/space-bg.jpg');
 	background-size: cover;
 	background-repeat: repeat;
-	width: 100vw; 
+	width: auto; 
 	height: 98vh; 
 }
