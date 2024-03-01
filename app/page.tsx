@@ -18,19 +18,13 @@
 // 	);
 // }
 import styles from '../styles/star-field.module.css';
+import { Meteors } from "../components/ui/meteors";
 
 export default function Home() {
 	return (
-		<div className={styles.customBody}>
-			<div className={styles.customBody}>
-				<div className={styles.bg}></div>
-
-				<div className={styles['star-field']}>
-					<div className={styles.layer}></div>
-					<div className={styles.layer}></div>
-					<div className={styles.layer}></div>
-				</div>
-			</div>
-		</div>
-	);
+        <div>
+          {/* Meaty part - Meteor effect */}
+          <Meteors number={100} />
+        </div>
+    )
 }
