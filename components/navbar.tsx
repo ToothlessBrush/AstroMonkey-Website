@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Button } from '@mui/material';
 export const NavBar = () => {
 	return (
-		<div className='fixed top-0 w-full h-20 border-b shadow-sm flex items-center'>
+		<div className='fixed top-0 w-full h-20 border-b shadow-sm flex items-center justify-center'>
 			<div className='flex '>
 				<Image
 					src=''
@@ -13,7 +13,7 @@ export const NavBar = () => {
 				/>
 			</div>
 			<div className=''>
-				<Button>
+				<Button variant='text'>
 					<Link
 						href='/donate'
 						className='text-white'>
@@ -35,8 +35,9 @@ export const NavBar = () => {
 					</Link>
 				</Button>
 			</div>
-			<div className='flex items-right'>
+			<div className='flex items-right rounded'>
 				<Image
+					className='rounded-xl'
 					src='/default-user.jpg'
 					alt=''
 					width={30}
