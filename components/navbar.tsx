@@ -6,7 +6,7 @@ export const NavBar = () => {
 		<div className='fixed top-0 w-full h-20 border-b shadow-sm flex items-center justify-center'>
 			<div className='flex '>
 				<Image
-					src=''
+					src='/vercel.svg'
 					alt=''
 					width={30}
 					height={30}
