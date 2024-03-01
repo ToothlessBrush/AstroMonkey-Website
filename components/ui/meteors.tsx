@@ -11,7 +11,7 @@ export const Meteors = ({
 }) => {
 	const meteors = new Array(number || 100).fill(true);
 	return (
-		<>
+		<div style={{ position: 'relative', height: '100vh', width: '100vw' }}>
 			{meteors.map((el, idx) => (
 				<span
 					key={'meteor' + idx}
@@ -21,15 +21,14 @@ export const Meteors = ({
 						className
 					)}
 					style={{
-						top: 0,
-						left:
-							Math.floor(Math.random() * (400 - -400) + -400) +
-							'px',
+						top: '0',
+						left: `${Math.random() * 100}%`,
 						animationDelay: Math.random() * (0.8 - 0.2) + 0.2 + 's',
 						animationDuration:
-							Math.floor(Math.random() * (10 - 2) + 2) + 's',
+							Math.floor(Math.random() * (12.5 - 6.25) + 6.25) +
+							's',
 					}}></span>
 			))}
-		</>
+		</div>
 	);
 };
