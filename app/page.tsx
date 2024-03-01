@@ -34,7 +34,9 @@ export default function Home() {
 									variant='contained'
 									color='success'
 									size='large'>
-									<Link href=''> Sign in</Link>
+									<Link href='localhost:3001/api/auth/discord'>
+										Sign in
+									</Link>
 								</Button>
 								<Button
 									sx={{
@@ -45,7 +47,9 @@ export default function Home() {
 									startIcon={<Invite />}
 									variant='contained'
 									size='large'>
-									<Link href=''>Invite</Link>
+									<Link href='https://discord.com/api/oauth2/authorize?client_id=1046617120408080475&permissions=277062371904&scope=bot%20applications.commands'>
+										Invite
+									</Link>
 								</Button>
 							</div>
 						</div>

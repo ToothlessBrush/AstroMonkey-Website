@@ -13,31 +13,31 @@ export const NavBar = () => {
 						height={30}
 					/>
 				</div>
-				
-					<div className='space-x-12'>
-						<button className='uppercase'>
-							<Link
-								href='/donate'
-								className='text-white'>
-								Donate
-							</Link>
-						</button>
-						<button className='uppercase'>
-							<Link
-								href='dashboard'
-								className='text-white'>
-								Dashboard
-							</Link>
-						</button>
-						<button className='uppercase'>
-							<Link
-								href='faqs'
-								className='text-white'>
-								FAQs
-							</Link>
-						</button>
-					</div>
-				
+
+				<div className='flex items-center justify-between  w-[50vw]'>
+					<button className='uppercase'>
+						<Link
+							href='/donate'
+							className='text-white'>
+							Donate
+						</Link>
+					</button>
+					<button className='uppercase'>
+						<Link
+							href='dashboard'
+							className='text-white'>
+							Dashboard
+						</Link>
+					</button>
+					<button className='uppercase'>
+						<Link
+							href='faqs'
+							className='text-white'>
+							FAQs
+						</Link>
+					</button>
+				</div>
+
 				<div className='flex items-right rounded'>
 					<Image
 						className='rounded-2xl'
