@@ -1,59 +1,70 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
-
-const Dashboard: React.FC = () => {
-    const [accessToken, setAccessToken] = useState<string | null>(null);
-
-    const params = useSearchParams();
-    const code = params.get("code");
-
-    console.log(code);
-
-    useEffect(() => {
-        if (code) {
-            const API_ENDPOINT = "http://discord.com/api/v10/oauth2/token";
-            const CLIENT_ID = "892848741860638781";
-            const CLIENT_SECRET = process.env.TOKEN;
-            const REDIRECT_URI = "http://localhost:3000/dashboard";
-
-            const data = {
-                grant_type: "authorization_code",
-                code: code,
-                REDIRECT_URI: REDIRECT_URI,
-            };
-
-            const headers = {
-                "Content-Type": "application/x-www-form-urlencoded",
-                Authorization: `Basic ${btoa(`${CLIENT_ID}:${CLIENT_SECRET}`)}`,
-            };
-
-            const urlencodedData = new URLSearchParams(data).toString();
-
-            fetch(API_ENDPOINT, {
-                method: "POST",
-                headers: headers,
-                body: urlencodedData,
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    console.log(data);
-                    setAccessToken(data.access_token);
-                })
-                .catch((error) => {
-                    console.error(`error: `, error);
-                });
-        }
-    }, []);
-
-    return (
-        <div>
-            <h1>Dashboard</h1>
-            <p>Code: {code}</p>
-            <p>Access Token: {accessToken}</p>
-        </div>
-    );
+import React from 'react';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+const FAQsPage = () => {
+	return (
+		<div className='flex flex-col items-center justify-center'>
+			<div className='flex flex-col items-center mt-[13vh] w-5/6'>
+				<div className='text-white text-5xl mb-12 text-center'>
+					Fequently Asked Questions
+				</div>
+				<Accordion className='mb-5'>
+					<AccordionSummary
+						expandIcon={<ExpandMoreIcon />}
+						aria-controls='panel1-content'
+						id='panel1-header'>
+						Accordion 1
+					</AccordionSummary>
+					<AccordionDetails>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Suspendisse malesuada lacus ex, sit amet blandit leo
+						lobortis eget.
+					</AccordionDetails>
+				</Accordion>
+				<Accordion className='mb-5'>
+					<AccordionSummary
+						expandIcon={<ExpandMoreIcon />}
+						aria-controls='panel2-content'
+						id='panel2-header'>
+						Accordion 2
+					</AccordionSummary>
+					<AccordionDetails>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Suspendisse malesuada lacus ex, sit amet blandit leo
+						lobortis eget.
+					</AccordionDetails>
+				</Accordion>
+				<Accordion className='mb-5'>
+					<AccordionSummary
+						expandIcon={<ExpandMoreIcon />}
+						aria-controls='panel3-content'
+						id='panel3-header'>
+						Accordion 3
+					</AccordionSummary>
+					<AccordionDetails>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Suspendisse malesuada lacus ex, sit amet blandit leo
+						lobortis eget.
+					</AccordionDetails>
+				</Accordion>
+				<Accordion className='mb-5'>
+					<AccordionSummary
+						expandIcon={<ExpandMoreIcon />}
+						aria-controls='panel4-content'
+						id='panel4-header'>
+						Accordion 4
+					</AccordionSummary>
+					<AccordionDetails>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Suspendisse malesuada lacus ex, sit amet blandit leo
+						lobortis eget.
+					</AccordionDetails>
+				</Accordion>
+			</div>
+		</div>
+	);
 };
 
-export default Dashboard;
+export default FAQsPage;
