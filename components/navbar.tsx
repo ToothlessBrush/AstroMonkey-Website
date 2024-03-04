@@ -37,8 +37,8 @@ export const NavBar = () => {
 						<Image
 							src='/vercel.svg'
 							alt=''
-							width={30}
-							height={30}
+							width={50}
+							height={50}
 						/>
 					</Link>
 				</div>
@@ -72,11 +72,11 @@ export const NavBar = () => {
 
 				<div className='flex items-right rounded'>
 					<Image
-						className='rounded-2xl'
+						className='rounded-3xl'
 						src='/default-user.jpg'
 						alt=''
-						width={30}
-						height={30}
+						width={50}
+						height={50}
 					/>
 				</div>
 			</div>
