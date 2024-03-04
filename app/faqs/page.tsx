@@ -1,8 +1,11 @@
 import React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+import {
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from '@/components/ui/accordion';
 const FAQsPage = () => {
 	return (
 		<div className='flex flex-col items-center justify-center'>
@@ -10,57 +13,30 @@ const FAQsPage = () => {
 				<div className='text-white text-5xl mb-12 text-center'>
 					Fequently Asked Questions
 				</div>
-				<Accordion className='mb-5'>
-					<AccordionSummary
-						expandIcon={<ExpandMoreIcon />}
-						aria-controls='panel1-content'
-						id='panel1-header'>
-						Accordion 1
-					</AccordionSummary>
-					<AccordionDetails>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Suspendisse malesuada lacus ex, sit amet blandit leo
-						lobortis eget.
-					</AccordionDetails>
-				</Accordion>
-				<Accordion className='mb-5'>
-					<AccordionSummary
-						expandIcon={<ExpandMoreIcon />}
-						aria-controls='panel2-content'
-						id='panel2-header'>
-						Accordion 2
-					</AccordionSummary>
-					<AccordionDetails>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Suspendisse malesuada lacus ex, sit amet blandit leo
-						lobortis eget.
-					</AccordionDetails>
-				</Accordion>
-				<Accordion className='mb-5'>
-					<AccordionSummary
-						expandIcon={<ExpandMoreIcon />}
-						aria-controls='panel3-content'
-						id='panel3-header'>
-						Accordion 3
-					</AccordionSummary>
-					<AccordionDetails>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Suspendisse malesuada lacus ex, sit amet blandit leo
-						lobortis eget.
-					</AccordionDetails>
-				</Accordion>
-				<Accordion className='mb-5'>
-					<AccordionSummary
-						expandIcon={<ExpandMoreIcon />}
-						aria-controls='panel4-content'
-						id='panel4-header'>
-						Accordion 4
-					</AccordionSummary>
-					<AccordionDetails>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Suspendisse malesuada lacus ex, sit amet blandit leo
-						lobortis eget.
-					</AccordionDetails>
+				<Accordion
+					type='single'
+					collapsible
+					className='w-5/6 text-white'>
+					<AccordionItem value='item-1'>
+						<AccordionTrigger>Is it accessible?</AccordionTrigger>
+						<AccordionContent>
+							Yes. It adheres to the WAI-ARIA design pattern.
+						</AccordionContent>
+					</AccordionItem>
+					<AccordionItem value='item-2'>
+						<AccordionTrigger>Is it styled?</AccordionTrigger>
+						<AccordionContent>
+							Yes. It comes with default styles that matches the
+							other components&apos; aesthetic.
+						</AccordionContent>
+					</AccordionItem>
+					<AccordionItem value='item-3'>
+						<AccordionTrigger>Is it animated?</AccordionTrigger>
+						<AccordionContent>
+							Yes. It's animated by default, but you can disable
+							it if you prefer.
+						</AccordionContent>
+					</AccordionItem>
 				</Accordion>
 			</div>
 		</div>

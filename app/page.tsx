@@ -1,5 +1,6 @@
+
 import styles from '@/styles/star-field.module.css';
-import { Button } from '@mui/material';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Footer } from '@/components/footer';
 import { NavBar } from '@/components/navbar';
@@ -25,30 +26,19 @@ export default function Home() {
 								Queue management, and creating/using playlists.
 								<div />
 								<div className='text-white flex justify-center space-x-8 rounded mt-5'>
-									<Button
-										sx={{
-											'&:hover': {
-												backgroundColor: '#8729D0',
-											},
-										}}
-										endIcon={<Discord />}
-										variant='contained'
-										color='success'
-										size='large'>
-										<Link href='http://localhost:3001/api/auth/discord'>
+									<Button className='w-[12vh] h-[3vh] hover:bg-purple-950 bg-purple-900 rounded-3xl'>
+										<Discord />
+										<Link
+											href='http://localhost:3001/api/auth/discord'
+											className=' text-xl'>
 											Sign in
 										</Link>
 									</Button>
-									<Button
-										sx={{
-											'&:hover': {
-												backgroundColor: '#8729D0',
-											},
-										}}
-										startIcon={<Invite />}
-										variant='contained'
-										size='large'>
-										<Link href='https://discord.com/api/oauth2/authorize?client_id=1046617120408080475&permissions=277062371904&scope=bot%20applications.commands'>
+									<Button className='w-[12vh] h-[3vh] hover:bg-purple-950 bg-purple-900 rounded-3xl'>
+										<Invite />
+										<Link
+											href='https://discord.com/api/oauth2/authorize?client_id=1046617120408080475&permissions=277062371904&scope=bot%20applications.commands'
+											className=' text-xl'>
 											Invite
 										</Link>
 									</Button>

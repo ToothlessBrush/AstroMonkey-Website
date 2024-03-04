@@ -1,4 +1,11 @@
+import { MediaPlayer } from '@/components/mediaPlayer';
+
 const DashboardPage = () => {
-	return <div></div>;
+	return (
+		<div className='text-white'>
+			example
+			<MediaPlayer />
+		</div>
+	);
 };
 export default DashboardPage;
