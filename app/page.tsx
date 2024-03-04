@@ -1,4 +1,3 @@
-
 import styles from '@/styles/star-field.module.css';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -6,12 +5,11 @@ import { Footer } from '@/components/footer';
 import { NavBar } from '@/components/navbar';
 import Discord from '@/components/discord';
 import Invite from '@/components/invite';
-import { Meteors } from '@/components/ui/meteors';
-
+import { ShootingStars } from '@/components/ui/shootingStars';
 export default function Home() {
 	return (
 		<div>
-			<Meteors number={30} />
+			<ShootingStars />
 			<div className={styles.bg}>
 				<div className={styles.bgOnTop}>
 					<NavBar />
@@ -20,12 +18,10 @@ export default function Home() {
 							<div className='mb-5 text-8xl text-center'>
 								WELCOME TO ASTROMONKEY
 							</div>
-							<div className='text-4xl lg:w-2/5 md:3/5 text-center'>
-								An open-source music bot that has support for
-								Auto completion, search using Slash Commands,
-								Queue management, and creating/using playlists.
+							<div className='text-4xl md:3/5 lg:w-3/5 text-center'>
+								Control your music in the web
 								<div />
-								<div className='text-white flex justify-center space-x-8 rounded mt-5'>
+								<div className='text-white flex justify-center space-x-8 rounded mt-10'>
 									<Button className='w-[12vh] h-[3vh] hover:bg-purple-950 bg-purple-900 rounded-3xl'>
 										<Discord />
 										<Link
